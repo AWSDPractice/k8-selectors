@@ -21,7 +21,7 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
       - labelSelector:
           matchExpressions:
-          - key: security
+          - key: hardware
             operator: In
             values:
             - pod-1
