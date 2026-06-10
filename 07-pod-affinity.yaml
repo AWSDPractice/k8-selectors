@@ -3,11 +3,11 @@ kind: Pod
 metadata:
   name: pod-1
   labels:
-    app: pod-1
+    app-name: pod-1
 spec: 
   containers:
   - name: with-pod-affinity
-    image: registry.k9s.io/pause:3.8  
+    image: registry.k8s.io/pause:3.8  
 ---
 apiVersion: v1
 kind: Pod
@@ -21,7 +21,7 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
       - labelSelector:
           matchExpressions:
-          - key: hardware
+          - key: app-name
             operator: In
             values:
             - pod-1
